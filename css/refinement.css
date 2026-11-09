@@ -1,0 +1,94 @@
+
+/* ====================================
+   PORTFOLIO — CLEAN REFINEMENT
+==================================== */
+
+/* SECTION HEADERS */
+
+.hp-section-top,
+.about-page .section-heading,
+.hp-contact-top {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* MORE SPACE INSTEAD OF BORDERS */
+
+.hp-section-top,
+.about-page .section-heading {
+  margin-bottom: 35px;
+}
+
+/* SKILLS — ONLY SUBTLE SEPARATORS */
+
+.hp-skills-list {
+  border-top: none;
+}
+
+.hp-skill-item {
+  border-bottom: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.hp-skill-item + .hp-skill-item {
+  border-top: 1px solid rgba(29, 36, 51, 0.09);
+}
+
+/* TOOLS ORBIT */
+
+.hp-skills .tool-orbit {
+  border-top: none;
+}
+
+.hp-skills .orbit-header,
+.hp-skills .orbit-footer {
+  border: none;
+}
+
+/* ACTIVITIES CAROUSEL */
+
+.activity-bottom {
+  border-top: none;
+  padding-top: 8px;
+}
+
+.activity-track {
+  padding-bottom: 20px;
+}
+
+/* ABOUT PAGE */
+
+.about-topline,
+.about-hero-bottom {
+  border: none;
+}
+
+.about-page .approach-item,
+.about-page .approach-item + .approach-item {
+  border: none;
+}
+
+/* CONTACT CTA */
+
+.hp-contact-top,
+.hp-footer,
+.about-page .cta-top,
+.about-page .cta-bottom {
+  border: none;
+}
+
+/* FOOTER */
+
+.hp-footer {
+  padding-top: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .hp-section-top,
+  .about-page .section-heading {
+    margin-bottom: 24px;
+  }
+}

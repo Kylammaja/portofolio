@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 690" width="1100" height="690">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5e7081"/><stop offset="1" stop-color="#0C141F"/></linearGradient><radialGradient id="r"><stop stop-color="#B7C7D7" stop-opacity=".35"/><stop offset="1" stop-color="#9AB0C8" stop-opacity="0"/></radialGradient></defs>
+<rect width="1100" height="690" fill="url(#g)"/><circle cx="826" cy="317" r="330" fill="url(#r)"/><path d="M0 75H1100M0 90H1100" stroke="#C3D0DE" opacity=".15" stroke-width="3"/>
+<rect x="468" y="150" width="740" height="465" rx="17" fill="#0B121B" stroke="#A4B6C8" stroke-opacity=".4" stroke-width="3"/>
+<rect x="468" y="150" width="740" height="45" rx="14" fill="#273B50"/><circle cx="490" cy="172" r="6" fill="#D4E0EB" opacity=".55"/><circle cx="511" cy="172" r="6" fill="#D4E0EB" opacity=".55"/><circle cx="533" cy="172" r="6" fill="#D4E0EB" opacity=".55"/>
+<rect x="510" y="233" width="320" height="29" fill="#A3B6C9" opacity=".65"/><rect x="510" y="282" width="250" height="15" fill="#A3B6C9" opacity=".24"/><rect x="510" y="312" width="300" height="15" fill="#A3B6C9" opacity=".24"/>
+<rect x="509" y="370" width="154" height="41" rx="4" fill="#71849B"/><rect x="850" y="227" width="265" height="330" rx="6" fill="#3E5872"/>
+<circle cx="983" cy="370" r="105" stroke="#DCE2E8" stroke-opacity=".25" stroke-width="35" fill="none"/>
+<text x="64" y="95" font-family="Arial,sans-serif" font-size="17" letter-spacing="5" fill="#DCE2E8">VISUAL</text>
+<text x="60" y="400" font-family="Impact,Arial Black,sans-serif" font-size="91" font-weight="900" fill="#F5F5F4">POSTER</text>
+<text x="60" y="498" font-family="Impact,Arial Black,sans-serif" font-size="91" font-weight="900" fill="#A7BCD1">ART</text>
+<text x="65" y="552" font-family="Arial,sans-serif" font-size="17" letter-spacing="3" fill="#DCE2E8">PROJECT PLACEHOLDER</text>
+</svg>

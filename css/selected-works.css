@@ -1,0 +1,549 @@
+
+/* =====================================
+   SELECTED WORKS — AUTO SHOWCASE
+===================================== */
+
+.hp-projects {
+  background: #FFFFFF;
+  color: var(--midnight);
+  overflow: hidden;
+}
+
+/* =====================================
+   SECTION INTRO
+===================================== */
+
+.sw-intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 70px auto 35px;
+}
+
+.sw-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--slate);
+}
+
+.sw-intro h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.075em;
+}
+
+.sw-intro h2 em {
+  font-style: normal;
+  color: var(--taupe);
+}
+
+.sw-intro p {
+  max-width: 480px;
+  margin: 22px auto 0;
+
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--slate);
+}
+
+/* =====================================
+   MAIN SHOWCASE LAYOUT
+===================================== */
+
+.sw-auto-showcase {
+  width: 100%;
+  min-height: 620px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.45fr)
+    minmax(0, 0.72fr);
+
+  align-items: center;
+  gap: clamp(15px, 3vw, 60px);
+
+  position: relative;
+}
+
+/* =====================================
+   LEFT PROJECT INFORMATION
+===================================== */
+
+.sw-info-panel {
+  height: 470px;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 38px 0;
+}
+
+.sw-small-label,
+.sw-info-footer,
+.sw-side-panel > span,
+.sw-bottom-note span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--slate);
+}
+
+.sw-project-detail {
+  min-height: 165px;
+}
+
+.sw-project-number {
+  display: block;
+
+  margin-bottom: 23px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: var(--taupe);
+}
+
+.sw-active-title {
+  max-width: 350px;
+  overflow-wrap: break-word;
+
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.6vw, 60px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 1.1;
+
+  color: var(--midnight);
+}
+
+.sw-active-type {
+  margin-top: 20px;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  color: var(--slate);
+}
+
+/* =====================================
+   CENTER VERTICAL IMAGE RAIL
+===================================== */
+
+.sw-rail {
+  position: relative;
+  width: 100%;
+  height: 610px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 14%,
+    #000 86%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 14%,
+    #000 86%,
+    transparent 100%
+  );
+}
+
+.sw-rail::-webkit-scrollbar {
+  display: none;
+}
+
+/* JS AUTOMATIC SCROLL */
+
+.sw-auto-ready .sw-rail {
+  overflow: hidden;
+}
+
+.sw-rail-track {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  will-change: transform;
+}
+
+.sw-rail-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 28px;
+  padding-bottom: 28px;
+
+  width: 100%;
+}
+
+/* =====================================
+   PROJECT IMAGE
+===================================== */
+
+.sw-slide {
+  width: 86%;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* Different image widths like reference */
+
+.sw-slide:nth-child(6n+1) {
+  width: 90%;
+}
+
+.sw-slide:nth-child(6n+2) {
+  width: 72%;
+}
+
+.sw-slide:nth-child(6n+3) {
+  width: 84%;
+}
+
+.sw-slide:nth-child(6n+4) {
+  width: 76%;
+}
+
+.sw-slide:nth-child(6n+5) {
+  width: 88%;
+}
+
+.sw-slide:nth-child(6n+6) {
+  width: 79%;
+}
+
+.sw-slide-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.48;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 7px;
+
+  background: var(--sand);
+}
+
+/* PROJECT SCREENSHOT */
+
+.sw-slide-visual img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+  transition: opacity .45s ease;
+
+  pointer-events: none;
+}
+
+.sw-slide-visual.has-image img {
+  opacity: 1;
+}
+
+/* =====================================
+   IMAGE PLACEHOLDER
+===================================== */
+
+.sw-slide-fallback {
+  position: absolute;
+  inset: 0;
+
+  padding: clamp(16px, 2vw, 28px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.sw-slide-fallback small {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.sw-slide-fallback strong {
+  max-width: 100%;
+
+  font-family: var(--font-heading);
+  font-size: clamp(25px, 3vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 1.06;
+}
+
+.sw-slide-visual.has-image .sw-slide-fallback {
+  opacity: 0;
+}
+
+/* =====================================
+   PROJECT COLORS
+===================================== */
+
+.sw-tone-school {
+  background: #DCE9E4;
+  color: #003844;
+}
+
+.sw-tone-hotel {
+  background: #D4C1AC;
+  color: #4E2A2E;
+}
+
+.sw-tone-portfolio {
+  background: #E4DED6;
+  color: #1D2433;
+}
+
+.sw-tone-tracking {
+  background: #263244;
+  color: #F7F5F0;
+}
+
+.sw-tone-poster {
+  background: #D5B8C2;
+  color: #4A3446;
+}
+
+.sw-tone-other {
+  background: #C8D0C9;
+  color: #33483E;
+}
+
+/* =====================================
+   RIGHT DECORATIVE PANEL
+===================================== */
+
+.sw-side-panel {
+  height: 470px;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding: 38px 0;
+
+  text-align: right;
+}
+
+.sw-side-symbol {
+  display: block;
+
+  color: var(--sand);
+  font-size: clamp(70px, 10vw, 150px);
+  line-height: 1;
+
+  animation: sw-symbol-rotate 24s linear infinite;
+}
+
+@keyframes sw-symbol-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sw-side-panel p {
+  max-width: 165px;
+
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--slate);
+}
+
+/* =====================================
+   BOTTOM TEXT
+===================================== */
+
+.sw-bottom-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding-top: 20px;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1050px) {
+
+  .sw-auto-showcase {
+    grid-template-columns:
+      minmax(0, .85fr)
+      minmax(0, 1.4fr);
+    gap: 20px;
+  }
+
+  .sw-side-panel {
+    display: none;
+  }
+
+  .sw-active-title {
+    font-size: clamp(30px, 4vw, 48px);
+  }
+
+  .sw-rail {
+    height: 560px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 760px) {
+
+  .sw-intro {
+    margin: 45px auto 20px;
+  }
+
+  .sw-intro h2 {
+    font-size: clamp(42px, 9vw, 64px);
+  }
+
+  .sw-intro p {
+    font-size: 13px;
+  }
+
+  .sw-auto-showcase {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    min-height: 0;
+  }
+
+  .sw-info-panel {
+    width: 100%;
+    height: auto;
+
+    padding: 30px 0 10px;
+
+    align-items: center;
+    text-align: center;
+  }
+
+  .sw-small-label,
+  .sw-info-footer {
+    display: none;
+  }
+
+  .sw-project-detail {
+    min-height: 125px;
+  }
+
+  .sw-project-number {
+    margin-bottom: 12px;
+  }
+
+  .sw-active-title {
+    max-width: 100%;
+
+    font-size: clamp(31px, 7vw, 45px);
+  }
+
+  .sw-active-type {
+    margin-top: 10px;
+  }
+
+  .sw-rail {
+    height: 430px;
+    max-width: 540px;
+  }
+
+  .sw-rail-group {
+    gap: 18px;
+    padding-bottom: 18px;
+  }
+
+  .sw-slide {
+    width: 86%;
+  }
+
+  .sw-slide-fallback strong {
+    font-size: clamp(25px, 7vw, 38px);
+  }
+
+  .sw-bottom-note span {
+    font-size: 8px;
+    letter-spacing: .6px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 400px) {
+  .sw-rail {
+    height: 350px;
+  }
+
+  .sw-slide-visual {
+    border-radius: 5px;
+  }
+
+  .sw-slide-fallback small {
+    font-size: 7px;
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .sw-side-symbol {
+    animation: none;
+  }
+
+  .sw-auto-ready .sw-rail {
+    overflow-y: auto;
+  }
+
+  .sw-rail-track {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .sw-slide-visual img {
+    transition: none;
+  }
+}

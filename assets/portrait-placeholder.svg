@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="1050" viewBox="0 0 850 1050">
+<defs><linearGradient id="j" x1="0" x2="1" y2="1"><stop stop-color="#33475D"/><stop offset="1" stop-color="#0A1018"/></linearGradient><linearGradient id="h" x1="0" x2="1" y2="1"><stop stop-color="#C6D2DD"/><stop offset="1" stop-color="#71859A"/></linearGradient><radialGradient id="gl"><stop stop-color="#D9E5EF" stop-opacity=".33"/><stop offset="1" stop-color="#71849B" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="425" cy="520" rx="340" ry="450" fill="url(#gl)"/>
+<path d="M224 550Q100 590 78 740L0 1050H850L769 730Q735 584 630 552L534 522L430 666L319 522Z" fill="url(#j)" stroke="#627A90" stroke-width="3"/>
+<path d="M362 506L365 610L424 675L489 612L490 505Z" fill="#8799AA"/>
+<path d="M354 567L421 675L317 1050H563L432 675L496 563L428 627Z" fill="#DCE2E8" opacity=".19"/>
+<ellipse cx="426" cy="350" rx="145" ry="185" fill="url(#h)"/>
+<path d="M278 393Q241 238 323 168Q394 96 488 137Q595 148 576 309L548 381L534 278Q463 285 366 244Q314 293 305 390Z" fill="#101820"/>
+<path d="M336 382Q379 371 407 388M452 388Q491 370 519 381" fill="none" stroke="#29394B" stroke-width="9" stroke-linecap="round"/>
+<path d="M405 460Q427 470 451 460" fill="none" stroke="#6C7D8C" stroke-width="5" stroke-linecap="round"/>
+<path d="M210 620Q170 740 181 1050M639 619Q685 770 675 1050" fill="none" stroke="#6E839B" stroke-width="8" opacity=".24"/>
+<text x="425" y="1002" font-family="Arial,sans-serif" font-size="19" fill="#DCE2E8" text-anchor="middle" opacity=".35" letter-spacing="5">GANTI DENGAN FOTO PRIBADI</text>
+</svg>
