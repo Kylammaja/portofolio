@@ -1,0 +1,724 @@
+
+/* ==========================================
+   CARBON & MUTED GOLD
+   PERSONAL PORTFOLIO THEME
+========================================== */
+
+/* ==========================================
+   01. GLOBAL COLOR VARIABLES
+========================================== */
+
+body.theme-carbon {
+  /* Main Palette */
+  --carbon: #101010;
+  --soft-white: #F8F8F6;
+  --gold: #C6A46A;
+
+  /* Neutral Surfaces */
+  --surface: #181818;
+  --surface-soft: #222222;
+  --surface-hover: #2B2B2B;
+
+  /* Typography */
+  --text-main: #F8F8F6;
+  --text-muted: #B8B8B3;
+  --text-subtle: #92928E;
+
+  /* Borders and Shadows */
+  --border: rgba(248, 248, 246, 0.12);
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+
+  /*
+   Compatibility with previous CSS.
+
+   Previous styles used --midnight for dark
+   text and --ivory for light backgrounds.
+   These aliases adapt them to dark mode.
+  */
+
+  --midnight: var(--soft-white);
+  --slate: var(--text-muted);
+  --taupe: var(--gold);
+  --sand: #292722;
+  --ivory: var(--carbon);
+  --white: var(--surface);
+
+  /* Older palette aliases */
+  --space-indigo: var(--soft-white);
+  --dusty-grape: var(--text-muted);
+  --lilac-ash: var(--gold);
+  --almond-silk: #292722;
+  --parchment: var(--carbon);
+
+  background: var(--carbon);
+  color: var(--soft-white);
+}
+
+/* ==========================================
+   02. GLOBAL ELEMENTS
+========================================== */
+
+body.theme-carbon .page-wrapper,
+body.theme-carbon .home-card {
+  background: var(--carbon);
+  color: var(--soft-white);
+}
+
+body.theme-carbon .home-card {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+body.theme-carbon ::selection {
+  background: var(--gold);
+  color: var(--carbon);
+}
+
+body.theme-carbon :focus-visible {
+  outline-color: var(--gold);
+}
+
+/* ==========================================
+   03. NAVBAR
+========================================== */
+
+body.theme-carbon .navbar {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+body.theme-carbon .brand,
+body.theme-carbon .nav-links a {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .brand span {
+  color: var(--gold);
+}
+
+/* Navigation hover */
+
+body.theme-carbon .nav-links a:hover,
+body.theme-carbon .nav-links a.active,
+body.theme-carbon .nav-links a[aria-current="page"] {
+  color: var(--gold);
+}
+
+body.theme-carbon .nav-links a::after {
+  background: var(--gold);
+}
+
+/* Navbar CTA */
+
+body.theme-carbon .nav-cta {
+  background: var(--gold);
+  color: var(--carbon);
+  box-shadow: none;
+}
+
+body.theme-carbon .nav-cta:hover {
+  background: var(--soft-white);
+  color: var(--carbon);
+}
+
+/* Mobile navbar */
+
+body.theme-carbon .menu-toggle span {
+  background: var(--soft-white);
+}
+
+body.theme-carbon .mobile-menu:not([hidden]) {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+}
+
+body.theme-carbon .mobile-menu a {
+  color: var(--soft-white);
+  border-color: var(--border);
+}
+
+body.theme-carbon .mobile-menu a:hover {
+  color: var(--gold);
+}
+
+/* ==========================================
+   04. HOME — HERO SECTION
+========================================== */
+
+body.theme-carbon .hero {
+  background: transparent;
+  color: var(--soft-white);
+}
+
+/* Giant Typography */
+
+body.theme-carbon .hero-word {
+  color: var(--soft-white);
+}
+
+/* Top labels */
+
+body.theme-carbon .hero-top,
+body.theme-carbon .hero-footer {
+  color: var(--text-muted);
+}
+
+/* Intro */
+
+body.theme-carbon .hero-intro p,
+body.theme-carbon .hero-description p {
+  color: var(--text-muted);
+}
+
+body.theme-carbon .hero-intro strong {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .intro-label,
+body.theme-carbon .hero-role {
+  color: var(--gold);
+}
+
+body.theme-carbon .description-line {
+  background: var(--gold);
+}
+
+/* Hero Footer */
+
+body.theme-carbon .hero-footer {
+  background: transparent;
+  border-top: none;
+}
+
+/* Hero CTA */
+
+body.theme-carbon .primary-btn,
+body.theme-carbon .email-btn {
+  background: var(--gold);
+  color: var(--carbon);
+  box-shadow: none;
+}
+
+body.theme-carbon .primary-btn:hover,
+body.theme-carbon .email-btn:hover {
+  background: var(--soft-white);
+  color: var(--carbon);
+}
+
+/* Profile placeholder */
+
+body.theme-carbon .portrait-placeholder,
+body.theme-carbon .photo-placeholder {
+  background: linear-gradient(
+    155deg,
+    #292826 0%,
+    #484139 55%,
+    #6B573C 100%
+  );
+
+  color: var(--soft-white);
+  opacity: 1;
+}
+
+/* ==========================================
+   05. HOME — SECTION BACKGROUNDS
+========================================== */
+
+body.theme-carbon .hp-about {
+  background: var(--carbon);
+}
+
+body.theme-carbon .hp-skills {
+  background: var(--surface);
+}
+
+body.theme-carbon .hp-activities {
+  background: var(--carbon);
+}
+
+body.theme-carbon .hp-projects {
+  background: var(--surface);
+}
+
+body.theme-carbon .hp-contact {
+  background: var(--carbon);
+  color: var(--soft-white);
+}
+
+/* Section headings */
+
+body.theme-carbon .hp-title-row h2,
+body.theme-carbon .hp-about-heading h2,
+body.theme-carbon .activity-heading h2,
+body.theme-carbon .sw-intro h2 {
+  color: var(--soft-white);
+}
+
+/* Accent words */
+
+body.theme-carbon .hp-title-row h2 em,
+body.theme-carbon .hp-about-heading h2 em,
+body.theme-carbon .activity-heading h2 em,
+body.theme-carbon .sw-intro h2 em {
+  color: var(--gold);
+}
+
+/* Section labels and descriptions */
+
+body.theme-carbon .hp-section-top,
+body.theme-carbon .hp-section-top span,
+body.theme-carbon .hp-eyebrow,
+body.theme-carbon .hp-title-row p,
+body.theme-carbon .hp-about-detail p,
+body.theme-carbon .activity-heading p,
+body.theme-carbon .sw-intro p {
+  color: var(--text-muted);
+}
+
+/* Reduce decorative lines */
+
+body.theme-carbon .hp-section-top,
+body.theme-carbon .hp-contact-top {
+  border: none;
+}
+
+/* General navigation links */
+
+body.theme-carbon .hp-text-link,
+body.theme-carbon .about-link {
+  color: var(--soft-white);
+  border-bottom: none;
+}
+
+body.theme-carbon .hp-text-link span {
+  color: var(--gold);
+}
+
+body.theme-carbon .hp-text-link:hover,
+body.theme-carbon .about-link:hover {
+  color: var(--gold);
+}
+
+/* ==========================================
+   06. EXPERTISE — SKILLS
+========================================== */
+
+body.theme-carbon .hp-skills-list {
+  border-top: none;
+}
+
+body.theme-carbon .hp-skill-item {
+  color: var(--soft-white);
+  border-bottom: none;
+}
+
+body.theme-carbon .hp-skill-item + .hp-skill-item {
+  border-top: 1px solid var(--border);
+}
+
+body.theme-carbon .hp-skill-item h3 {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .hp-skill-item p,
+body.theme-carbon .hp-skill-number {
+  color: var(--text-muted);
+}
+
+body.theme-carbon .hp-item-arrow {
+  color: var(--gold);
+}
+
+body.theme-carbon .hp-skill-item:hover h3 {
+  color: var(--gold);
+}
+
+/* ==========================================
+   07. TOOLS & TECHNOLOGIES ORBIT
+========================================== */
+
+body.theme-carbon .hp-skills .tool-orbit {
+  background: var(--surface);
+  color: var(--soft-white);
+  border: 1px solid rgba(198, 164, 106, 0.12);
+  box-shadow: none;
+}
+
+/* Header and footer */
+
+body.theme-carbon .hp-skills .orbit-header {
+  border-bottom: 1px solid rgba(198, 164, 106, 0.12);
+}
+
+body.theme-carbon .hp-skills .orbit-footer {
+  border-top: 1px solid rgba(198, 164, 106, 0.12);
+}
+
+body.theme-carbon .hp-skills .orbit-header span,
+body.theme-carbon .hp-skills .orbit-footer span {
+  color: var(--text-muted);
+}
+
+/* Orbit tiles */
+
+body.theme-carbon .hp-skills .orbit-tile {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+body.theme-carbon .hp-skills .orbit-tile::before {
+  background: transparent;
+  opacity: 0;
+}
+
+body.theme-carbon .hp-skills .orbit-tile img {
+  filter: none;
+}
+
+body.theme-carbon .hp-skills .orbit-tile span {
+  color: var(--soft-white);
+}
+
+/* Central content */
+
+body.theme-carbon .hp-skills .orbit-eyebrow {
+  color: var(--gold);
+}
+
+body.theme-carbon .hp-skills .orbit-content h3 {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .hp-skills .orbit-content h3 span {
+  color: var(--gold);
+}
+
+body.theme-carbon .hp-skills .orbit-content p {
+  color: var(--text-muted);
+}
+
+/* Orbit Buttons */
+
+body.theme-carbon .hp-skills .orbit-cta,
+body.theme-carbon .hp-skills .orbit-next {
+  background: var(--gold);
+  color: var(--carbon);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+body.theme-carbon .hp-skills .orbit-cta:hover,
+body.theme-carbon .hp-skills .orbit-next:hover {
+  background: var(--soft-white);
+  color: var(--carbon);
+}
+
+body.theme-carbon .hp-skills .orbit-toggle {
+  color: var(--text-muted);
+}
+
+body.theme-carbon .hp-skills .orbit-toggle:hover {
+  color: var(--gold);
+}
+
+/* ==========================================
+   08. ACTIVITIES — PHOTO CAROUSEL
+========================================== */
+
+body.theme-carbon .activity-eyebrow {
+  color: var(--gold);
+}
+
+body.theme-carbon .activity-caption,
+body.theme-carbon .activity-current {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .activity-total,
+body.theme-carbon .activity-separator {
+  color: var(--gold);
+}
+
+/* Dark neutral photo placeholders */
+
+body.theme-carbon .activity-card:nth-child(odd)
+.activity-frame {
+  background: linear-gradient(
+    150deg,
+    #282828,
+    #5A4C38
+  );
+}
+
+body.theme-carbon .activity-card:nth-child(even)
+.activity-frame {
+  background: linear-gradient(
+    150deg,
+    #393733,
+    #202020
+  );
+}
+
+body.theme-carbon .activity-placeholder {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .activity-frame {
+  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+}
+
+/* Slider buttons */
+
+body.theme-carbon .activity-arrow {
+  background: var(--gold);
+  color: var(--carbon);
+  box-shadow: none;
+}
+
+body.theme-carbon .activity-arrow:hover:not(:disabled) {
+  background: var(--soft-white);
+  color: var(--carbon);
+}
+
+body.theme-carbon .activity-bottom {
+  border: none;
+}
+
+/* ==========================================
+   09. SELECTED WORKS — AUTO SCROLL
+========================================== */
+
+body.theme-carbon .sw-auto-showcase {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .sw-eyebrow,
+body.theme-carbon .sw-project-number {
+  color: var(--gold);
+}
+
+body.theme-carbon .sw-active-title {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .sw-active-type,
+body.theme-carbon .sw-small-label,
+body.theme-carbon .sw-info-footer,
+body.theme-carbon .sw-bottom-note span,
+body.theme-carbon .sw-side-panel p,
+body.theme-carbon .sw-side-panel > span {
+  color: var(--text-muted);
+}
+
+body.theme-carbon .sw-side-symbol {
+  color: var(--gold);
+}
+
+/* Project placeholders:
+   Actual project screenshots keep their own colors */
+
+body.theme-carbon .sw-tone-school,
+body.theme-carbon .sw-tone-portfolio,
+body.theme-carbon .sw-tone-poster {
+  background: #292929;
+  color: var(--soft-white);
+}
+
+body.theme-carbon .sw-tone-hotel,
+body.theme-carbon .sw-tone-tracking,
+body.theme-carbon .sw-tone-other {
+  background: #3C3429;
+  color: var(--soft-white);
+}
+
+body.theme-carbon .sw-slide-visual {
+  box-shadow: none;
+}
+
+body.theme-carbon .sw-slide-fallback small {
+  color: var(--gold);
+}
+
+/* ==========================================
+   10. ABOUT PAGE
+========================================== */
+
+body.theme-carbon.about-page {
+  background: var(--carbon);
+  color: var(--soft-white);
+}
+
+body.theme-carbon .about-hero {
+  background: var(--carbon);
+}
+
+body.theme-carbon .about-hero-title h1,
+body.theme-carbon .story-content h2,
+body.theme-carbon .approach-intro h2,
+body.theme-carbon .approach-item h3 {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .about-hero-title h1 em,
+body.theme-carbon .story-content h2 em,
+body.theme-carbon .approach-intro h2 em {
+  color: var(--gold);
+}
+
+/* About descriptions */
+
+body.theme-carbon .hero-eyebrow,
+body.theme-carbon .small-label,
+body.theme-carbon .about-hero-side p,
+body.theme-carbon .story-content p,
+body.theme-carbon .approach-intro p,
+body.theme-carbon .approach-item p {
+  color: var(--text-muted);
+}
+
+/* Who I Am */
+
+body.theme-carbon .about-story {
+  background: var(--surface);
+}
+
+body.theme-carbon .story-visual {
+  background: #242424;
+  color: var(--soft-white);
+}
+
+body.theme-carbon .story-visual::after {
+  border-color: rgba(198, 164, 106, 0.25);
+}
+
+body.theme-carbon .visual-small {
+  color: var(--gold);
+}
+
+body.theme-carbon .visual-outline {
+  -webkit-text-stroke: 1.5px var(--gold);
+}
+
+body.theme-carbon .story-tags span {
+  border-color: var(--border);
+  color: var(--soft-white);
+}
+
+body.theme-carbon .story-tags span:hover {
+  background: var(--gold);
+  color: var(--carbon);
+}
+
+/* About links */
+
+body.theme-carbon .story-link,
+body.theme-carbon .explore-link {
+  color: var(--soft-white);
+  border-bottom: none;
+}
+
+body.theme-carbon .story-link span,
+body.theme-carbon .explore-link span {
+  color: var(--gold);
+}
+
+/* My Approach */
+
+body.theme-carbon .about-approach {
+  background: var(--carbon);
+}
+
+body.theme-carbon .approach-number,
+body.theme-carbon .approach-category {
+  color: var(--text-muted);
+}
+
+body.theme-carbon .approach-icon {
+  color: var(--gold);
+}
+
+body.theme-carbon .approach-item,
+body.theme-carbon .approach-item + .approach-item {
+  border: none;
+}
+
+/* ==========================================
+   11. CONTACT CTA & FOOTER
+========================================== */
+
+body.theme-carbon .hp-contact,
+body.theme-carbon .about-cta {
+  background: var(--carbon);
+  color: var(--soft-white);
+}
+
+body.theme-carbon .hp-contact-content h2,
+body.theme-carbon .cta-content h2 {
+  color: var(--soft-white);
+}
+
+body.theme-carbon .hp-contact-content h2 em,
+body.theme-carbon .cta-content h2 em {
+  color: var(--gold);
+}
+
+body.theme-carbon .hp-contact-content p,
+body.theme-carbon .cta-content p {
+  color: var(--text-muted);
+}
+
+/* Contact buttons */
+
+body.theme-carbon .hp-contact-button,
+body.theme-carbon .cta-button {
+  background: var(--gold);
+  color: var(--carbon);
+}
+
+body.theme-carbon .hp-contact-button:hover,
+body.theme-carbon .cta-button:hover {
+  background: var(--soft-white);
+  color: var(--carbon);
+}
+
+/* Footer */
+
+body.theme-carbon .hp-footer,
+body.theme-carbon .cta-top,
+body.theme-carbon .cta-bottom {
+  border: none;
+}
+
+body.theme-carbon .hp-footer,
+body.theme-carbon .hp-footer a,
+body.theme-carbon .cta-bottom {
+  color: var(--text-muted);
+}
+
+body.theme-carbon .hp-footer a:hover,
+body.theme-carbon .cta-bottom a:hover {
+  color: var(--gold);
+}
+
+/* ==========================================
+   12. ACCESSIBILITY
+========================================== */
+
+body.theme-carbon a:focus-visible,
+body.theme-carbon button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-carbon *,
+  body.theme-carbon *::before,
+  body.theme-carbon *::after {
+    scroll-behavior: auto;
+  }
+}

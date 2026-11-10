@@ -1,0 +1,188 @@
+
+/* ==========================================
+   FULL SCREEN SECTION LAYOUT
+   CINEMATIC PORTFOLIO
+========================================== */
+
+/* ABOUT & SKILLS — MINIMUM FULL VIEWPORT */
+
+body.home-page.theme-carbon .hp-about,
+body.home-page.theme-carbon .hp-skills {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-block: clamp(70px, 8vh, 110px);
+}
+
+/* Keep content centered and constrained */
+
+body.home-page.theme-carbon .hp-about > .hp-container,
+body.home-page.theme-carbon .hp-skills > .hp-container {
+  width: min(
+    1240px,
+    calc(100% - 2 * var(--layout-gutter, 48px))
+  );
+
+  margin-inline: auto;
+}
+
+/* ==========================================
+   ABOUT ME
+========================================== */
+
+body.home-page.theme-carbon .hp-about-grid {
+  align-items: center;
+  padding-top: clamp(30px, 5vh, 60px);
+}
+
+body.home-page.theme-carbon .hp-about-heading {
+  align-self: center;
+}
+
+body.home-page.theme-carbon .hp-about-detail {
+  align-self: center;
+}
+
+/* ==========================================
+   TOOLS & TECHNOLOGIES
+========================================== */
+
+body.home-page.theme-carbon .hp-skills .hp-title-row {
+  margin-block: 24px 30px;
+}
+
+body.home-page.theme-carbon .hp-skills .tool-orbit {
+  margin-top: 25px;
+}
+
+/* Responsive orbit height */
+
+body.home-page.theme-carbon .hp-skills .orbit-stage {
+  height: clamp(320px, 43svh, 450px);
+}
+
+/* ==========================================
+   SHORT DESKTOP SCREENS
+========================================== */
+
+@media (min-width: 761px) and (max-height: 800px) {
+
+  body.home-page.theme-carbon .hp-about,
+  body.home-page.theme-carbon .hp-skills {
+    padding-block: 48px;
+  }
+
+  body.home-page.theme-carbon .hp-skills .hp-title-row {
+    margin-block: 18px 20px;
+  }
+
+  body.home-page.theme-carbon .hp-skills .tool-orbit {
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+
+  body.home-page.theme-carbon .hp-skills .orbit-stage {
+    height: 340px;
+  }
+}
+
+/* ==========================================
+   TABLET & MOBILE
+========================================== */
+
+@media (max-width: 760px) {
+
+  body.home-page.theme-carbon .hp-about,
+  body.home-page.theme-carbon .hp-skills {
+    min-height: 100svh;
+    height: auto;
+
+    padding-block: 80px 65px;
+  }
+
+  body.home-page.theme-carbon .hp-about-grid {
+    padding-top: 35px;
+    gap: 28px;
+  }
+
+  body.home-page.theme-carbon .hp-about-heading,
+  body.home-page.theme-carbon .hp-about-detail {
+    align-self: auto;
+  }
+
+  body.home-page.theme-carbon .hp-skills .hp-title-row {
+    margin-block: 25px;
+  }
+
+  body.home-page.theme-carbon .hp-skills .tool-orbit {
+    margin-top: 25px;
+  }
+
+  body.home-page.theme-carbon .hp-skills .orbit-stage {
+    height: 370px;
+  }
+}
+
+/* =====================================
+   EXPERTISE / TOOLS LAYOUT FIX
+===================================== */
+
+body.home-page.theme-carbon #skills {
+  display: block;
+
+  min-height: 100svh;
+  height: auto;
+
+  padding-top: calc(var(--nav-height, 76px) + 24px);
+  padding-bottom: 48px;
+
+  box-sizing: border-box;
+}
+
+body.home-page.theme-carbon #skills > .hp-container {
+  width: min(1240px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* Section heading */
+
+body.home-page.theme-carbon #skills .hp-section-top {
+  margin: 0;
+  padding: 0;
+}
+
+body.home-page.theme-carbon #skills .hp-title-row {
+  margin: 24px 0 30px;
+}
+
+/* Tools Orbit */
+
+body.home-page.theme-carbon #skills .tool-orbit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+  body.home-page.theme-carbon #skills {
+    padding-top: 90px;
+    padding-bottom: 48px;
+  }
+
+  body.home-page.theme-carbon #skills > .hp-container {
+    width: calc(100% - 32px);
+  }
+
+  body.home-page.theme-carbon #skills .hp-title-row {
+    margin: 20px 0 24px;
+  }
+
+}

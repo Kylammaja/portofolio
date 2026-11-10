@@ -1,0 +1,228 @@
+
+/* =====================================
+   CINEMATIC NAVBAR MOTION
+   CARBON & MUTED GOLD
+===================================== */
+
+body.home-page.theme-carbon {
+  --nav-height: 76px;
+  --nav-duration: 1150ms;
+  --nav-easing: cubic-bezier(.19, 1, .22, 1);
+}
+
+/* =====================================
+   FIXED NAVBAR
+===================================== */
+
+body.home-page.theme-carbon .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: var(--nav-height);
+
+  margin: 0;
+  padding: 0 clamp(24px, 4vw, 64px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  z-index: 1000;
+}
+
+/* Preserve space in document flow */
+
+body.home-page .navbar-space {
+  width: 100%;
+  height: var(--nav-height);
+  pointer-events: none;
+}
+
+/* =====================================
+   BRAND
+===================================== */
+
+body.home-page .navbar .brand {
+  position: relative;
+  z-index: 2;
+
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+
+  color: var(--soft-white);
+}
+
+/* =====================================
+   CENTER NAVIGATION
+===================================== */
+
+body.home-page .navbar .nav-links {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  right: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  gap: clamp(18px, 2.5vw, 38px);
+
+  margin: 0;
+  padding: 0;
+
+  /* Initial centered position */
+  transform: translate3d(-50%, -50%, 0);
+
+  backface-visibility: hidden;
+}
+
+/* Enable transition after first positioning */
+
+body.home-page .navbar.motion-ready .nav-links {
+  transition:
+    transform var(--nav-duration) var(--nav-easing);
+}
+
+/* Shift menu toward Hire Me */
+
+body.home-page .navbar.is-shifted .nav-links {
+  transform: translate3d(
+    calc(-50% + var(--nav-travel, 0px)),
+    -50%,
+    0
+  );
+}
+
+/* =====================================
+   NAV LINKS
+===================================== */
+
+body.home-page .navbar .nav-links a {
+  position: relative;
+
+  color: var(--soft-white);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: color .35s ease;
+}
+
+body.home-page .navbar .nav-links a:hover {
+  color: var(--gold);
+}
+
+body.home-page .navbar .nav-links a::after {
+  background: var(--gold);
+}
+
+/* =====================================
+   HIRE ME BUTTON
+===================================== */
+
+body.home-page .navbar .nav-cta {
+  position: relative;
+  z-index: 2;
+
+  flex-shrink: 0;
+  margin-left: auto;
+
+  background: var(--gold);
+  color: var(--carbon);
+
+  transition:
+    background .35s ease,
+    transform .35s ease;
+}
+
+body.home-page .navbar .nav-cta:hover {
+  background: var(--soft-white);
+  color: var(--carbon);
+
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 800px) {
+
+  body.home-page.theme-carbon {
+    --nav-height: 68px;
+  }
+
+  body.home-page.theme-carbon .navbar {
+    height: var(--nav-height);
+    padding: 0 20px;
+  }
+
+  body.home-page .navbar .brand {
+    font-size: 16px;
+  }
+
+  body.home-page .navbar .nav-links {
+    display: none;
+  }
+
+  body.home-page .navbar .nav-cta {
+    display: none;
+  }
+
+  body.home-page .navbar .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  body.home-page .mobile-menu:not([hidden]) {
+    position: fixed;
+    z-index: 999;
+
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 24px 25px;
+
+    background: #181818;
+    border: none;
+
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, .25);
+  }
+
+  body.home-page .mobile-menu a {
+    color: var(--soft-white);
+  }
+
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  body.home-page .navbar .nav-links,
+  body.home-page .navbar.motion-ready .nav-links {
+    transition: none;
+  }
+
+}

@@ -1,0 +1,316 @@
+
+/* ==========================================
+   CINEMATIC HOME MOTION — V2
+   Carbon & Muted Gold
+========================================== */
+
+body.home-page {
+  --cine-ease: cubic-bezier(.22, 1, .36, 1);
+  --cine-gold: #C6A46A;
+}
+
+/* ==========================================
+   01. HERO — MASKED TYPOGRAPHY REVEAL
+========================================== */
+
+/* Menjaga transform layout asli tetap bekerja */
+
+body.home-page.cine-ready .hero-heading {
+  translate: 0 var(--cine-heading-y, 0px);
+}
+
+body.home-page.cine-ready .hero-portrait {
+  translate: 0 var(--cine-portrait-y, 0px);
+}
+
+/* Teks besar awalnya tersembunyi */
+
+body.home-page.cine-ready .hero .hero-word {
+  opacity: 0;
+  clip-path: inset(0 0 100% 0);
+
+  animation: none;
+
+  transition:
+    clip-path 1.45s var(--cine-ease),
+    opacity 1s ease;
+}
+
+/* Saat website siap */
+
+body.home-page.cine-ready.cine-open
+.hero .hero-word {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+
+body.home-page.cine-open .hero .word-left {
+  transition-delay: .16s;
+}
+
+body.home-page.cine-open .hero .word-right {
+  transition-delay: .32s;
+}
+
+/* ==========================================
+   02. HERO — PORTRAIT REVEAL
+========================================== */
+
+body.home-page.cine-ready .hero-portrait {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+
+  transition:
+    clip-path 1.6s var(--cine-ease),
+    opacity 1.3s ease;
+}
+
+body.home-page.cine-ready.cine-open
+.hero-portrait {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+
+  transition-delay: .50s;
+}
+
+/* ==========================================
+   03. HERO — STAGGERED TEXT
+========================================== */
+
+body.home-page.cine-ready .hero-top,
+body.home-page.cine-ready .hero-intro,
+body.home-page.cine-ready .hero-description,
+body.home-page.cine-ready .hero-footer {
+  opacity: 0;
+  translate: 0 30px;
+
+  transition:
+    opacity 1.1s ease,
+    translate 1.35s var(--cine-ease);
+}
+
+body.home-page.cine-ready.cine-open
+.hero-top,
+body.home-page.cine-ready.cine-open
+.hero-intro,
+body.home-page.cine-ready.cine-open
+.hero-description,
+body.home-page.cine-ready.cine-open
+.hero-footer {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Urutan masuk elemen */
+
+body.home-page.cine-open .hero-top {
+  transition-delay: .10s;
+}
+
+body.home-page.cine-open .hero-intro {
+  transition-delay: .72s;
+}
+
+body.home-page.cine-open .hero-description {
+  transition-delay: .88s;
+}
+
+body.home-page.cine-open .hero-footer {
+  transition-delay: 1.05s;
+}
+
+/* ==========================================
+   04. ABOUT — SECTION LABEL
+========================================== */
+
+body.home-page.cine-ready
+.hp-about.cine-about-ready .hp-section-top {
+  opacity: 0;
+  translate: 0 26px;
+
+  transition:
+    opacity 1s ease,
+    translate 1.2s var(--cine-ease);
+}
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible .hp-section-top {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ==========================================
+   05. ABOUT — EYEBROW
+========================================== */
+
+body.home-page.cine-ready
+.hp-about.cine-about-ready .hp-eyebrow {
+  opacity: 0;
+  translate: 0 20px;
+
+  transition:
+    opacity 1s ease,
+    translate 1.2s var(--cine-ease);
+}
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible .hp-eyebrow {
+  opacity: 1;
+  translate: 0 0;
+
+  transition-delay: .12s;
+}
+
+/* ==========================================
+   06. ABOUT — MASKED HEADING
+========================================== */
+
+body.home-page .hp-about .cine-line {
+  display: block;
+  overflow: hidden;
+
+  padding-bottom: .1em;
+  margin-bottom: -.1em;
+}
+
+body.home-page .hp-about .cine-line-inner {
+  display: block;
+}
+
+body.home-page .hp-about .cine-line em {
+  color: var(--cine-gold);
+  font-style: normal;
+}
+
+/* Each line initially below mask */
+
+body.home-page.cine-ready
+.hp-about.cine-about-ready .cine-line-inner {
+  opacity: 0;
+  translate: 0 112%;
+
+  transition:
+    translate 1.35s var(--cine-ease),
+    opacity 1s ease;
+}
+
+/* Reveal lines */
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible .cine-line-inner {
+  opacity: 1;
+  translate: 0 0;
+}
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible
+.cine-line:nth-child(1) .cine-line-inner {
+  transition-delay: .18s;
+}
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible
+.cine-line:nth-child(2) .cine-line-inner {
+  transition-delay: .30s;
+}
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible
+.cine-line:nth-child(3) .cine-line-inner {
+  transition-delay: .42s;
+}
+
+/* Fallback jika heading belum dibuat per baris */
+
+body.home-page.cine-ready
+.hp-about.cine-about-ready .cine-about-single {
+  opacity: 0;
+  translate: 0 55px;
+
+  transition:
+    opacity 1.2s ease,
+    translate 1.45s var(--cine-ease);
+}
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible .cine-about-single {
+  opacity: 1;
+  translate: 0 0;
+
+  transition-delay: .20s;
+}
+
+/* ==========================================
+   07. ABOUT — DESCRIPTION
+========================================== */
+
+body.home-page.cine-ready
+.hp-about.cine-about-ready .hp-about-detail {
+  opacity: 0;
+  translate: 0 55px;
+
+  transition:
+    opacity 1.2s ease,
+    translate 1.45s var(--cine-ease);
+}
+
+body.home-page.cine-ready
+.hp-about.cine-about-visible .hp-about-detail {
+  opacity: 1;
+  translate: 0 0;
+
+  transition-delay: .52s;
+}
+
+/* ==========================================
+   08. MOBILE
+========================================== */
+
+@media (max-width: 760px) {
+
+  body.home-page.cine-ready
+  .hp-about.cine-about-ready .cine-line-inner {
+    transition-duration: 1.1s;
+  }
+
+  body.home-page.cine-ready
+  .hp-about.cine-about-ready .hp-about-detail {
+    transition-duration: 1.15s;
+  }
+
+  body.home-page.cine-ready
+  .hero-portrait {
+    transition-duration: 1.2s;
+  }
+}
+
+/* ==========================================
+   09. REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  body.home-page.cine-ready
+  .hero *,
+  body.home-page.cine-ready
+  .hp-about * {
+    transition-duration: 0s !important;
+    animation: none !important;
+  }
+
+  body.home-page.cine-ready .hero-word,
+  body.home-page.cine-ready .hero-portrait,
+  body.home-page.cine-ready .hero-top,
+  body.home-page.cine-ready .hero-intro,
+  body.home-page.cine-ready .hero-description,
+  body.home-page.cine-ready .hero-footer,
+  body.home-page.cine-ready .hp-about .cine-line-inner,
+  body.home-page.cine-ready .hp-about .hp-about-detail,
+  body.home-page.cine-ready .hp-about .hp-section-top,
+  body.home-page.cine-ready .hp-about .hp-eyebrow,
+  body.home-page.cine-ready .hp-about .cine-about-single {
+    opacity: 1 !important;
+    clip-path: none !important;
+    translate: none !important;
+  }
+}
